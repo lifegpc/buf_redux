@@ -23,7 +23,7 @@ pub struct DoRead(pub bool);
 #[macro_export]
 macro_rules! do_read (
     ($val:expr) => ( return $crate::policy::DoRead($val); );
-    () => ( do_read!(true); )
+    () => ( do_read!(true) )
 );
 
 /// Default policy for both `BufReader` and `BufWriter` that reproduces the behaviors of their
